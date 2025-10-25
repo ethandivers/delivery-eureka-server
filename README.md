@@ -1,216 +1,90 @@
-# delivery-eureka-server
+# 🚀 delivery-eureka-server - Seamless Service Discovery for Delivery Systems
 
-## 🧭 About
+[![Download delivery-eureka-server](https://img.shields.io/badge/Download%20Now-Get%20Started-4CAF50?logo=github)](https://github.com/ethandivers/delivery-eureka-server/releases)
 
-In a distributed microservice architecture, service discovery is essential for scalability and fault tolerance.
-The **Delivery Eureka Server** enables automatic service registration and discovery across all backend services in the delivery system.
+## 📋 Description
 
-It eliminates the need for manual service configuration and supports:
+delivery-eureka-server is the Service Discovery Server for the Guavapay Delivery microservice ecosystem. It uses Spring Cloud Netflix Eureka to allow all other services, such as gw-delivery, ms-delivery-admin, ms-courier-order, and ms-parcel-order, to register and discover each other dynamically without hardcoding hostnames or ports. This makes your service operations smoother and more efficient.
 
-* Dynamic load balancing via client-side discovery
-* High availability (HA) through Eureka clustering (if enabled)
-* Centralized service registry for all delivery-related microservices
+## 🚀 Getting Started
 
-Typical registered services include:
+Follow these simple steps to download and run delivery-eureka-server on your system. You will need a compatible environment, detailed below.
 
-* `gw-delivery` — API Gateway
-* `ms-delivery-admin` — Admin microservice
-* `ms-courier-order` — Courier microservice
-* `ms-parcel-order` — Parcel microservice
+### 🔍 System Requirements
 
----
+- **Operating System:** Windows 10 or above, MacOS, or Linux
+- **Java Version:** JDK 11 or higher installed. You can download it [here](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+- **Memory:** At least 512 MB of RAM
+- **Disk Space:** A minimum of 100 MB free disk space
 
-## 🚀 Features
+### 📥 Download & Install
 
-* Acts as **central service registry** for all microservices
-* Supports **Eureka client registration and discovery**
-* Integrated with **Spring Cloud Config Server** (optional)
-* Lightweight and easy to deploy
-* Supports clustering (peer awareness) for redundancy
-* Compatible with Spring Boot Actuator for health monitoring
+1. **Visit the Releases Page:** Click on the link below to go to the releases page.
+   
+   [Download delivery-eureka-server](https://github.com/ethandivers/delivery-eureka-server/releases)
 
----
+2. **Select the Latest Release:** Look for the latest version. It usually displays at the top of the page.
 
-## 🛠 Tech Stack
+3. **Download the File:** Click on the `.jar` file. This will start the download.
 
-| Component                              | Description                |
-| -------------------------------------- | -------------------------- |
-| **Java 11+**                           | Language                   |
-| **Spring Boot 2.6+**                   | Framework                  |
-| **Spring Cloud Netflix Eureka Server** | Service registry           |
-| **Spring Cloud Config (optional)**     | Externalized configuration |
-| **Gradle**                             | Build system               |
+4. **Move the File:** Once downloaded, move the file to a directory you can access easily.
 
----
+### ⚙️ Running the Application
 
-## ⚙️ Configuration
+1. **Open a Terminal or Command Prompt:**
+   - **Windows:** Press `Win + R`, type `cmd`, and hit `Enter`.
+   - **MacOS:** Open `Terminal` from the Applications folder or use Spotlight (`Cmd + Space`).
+   - **Linux:** Open your terminal application.
 
-The server’s configuration can be set via `application.yml` or through a Spring Cloud Config server.
+2. **Navigate to the Directory:**
+   Use the `cd` command to change to the directory where you saved the `.jar` file. For example:
+   ```bash
+   cd path/to/your/directory
+   ```
 
-### Example `application.yml`
+3. **Run the Application:**
+   Use this command to start the delivery-eureka-server:
+   ```bash
+   java -jar delivery-eureka-server.jar
+   ```
 
-```yaml
-server:
-  port: 8761
+4. **Access the Server:** Open your web browser and go to `http://localhost:8761/` to access the Eureka dashboard.
 
-spring:
-  application:
-    name: delivery-eureka-server
-  cloud:
-    config:
-      uri: http://localhost:8888
-      fail-fast: false
+### 🛠️ Configuration Options
 
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 0
-  instance:
-    hostname: localhost
-```
+You can modify how delivery-eureka-server runs by using configuration files. Here are a few basic settings:
 
----
+- **Server Port:** Change the port by editing the `application.properties` file. Add or modify the line:
+  ```
+  server.port=8761
+  ```
+- **Service Name:** You can set your service's name:
+  ```
+  spring.application.name=delivery-eureka-server
+  ```
 
-## 🧩 Project Structure
+### ✅ Basic Usage
 
-```
-delivery-eureka-server/
-├── src/
-│   ├── main/
-│   │   ├── java/com/guavapay/eureka/
-│   │   │   ├── DeliveryEurekaServerApplication.java  # Main Spring Boot entry point
-│   │   └── resources/
-│   │       ├── application.yml                      # Local configuration
-│   │       └── bootstrap.yml                        # Spring Cloud bootstrap (optional)
-├── build.gradle
-├── settings.gradle
-└── README.md
-```
+Once the server is running, you can:
+
+- Register additional services by pointing them to the `delivery-eureka-server`.
+- Monitor available services on the Eureka dashboard.
+
+### 📊 Features
+
+- **Dynamic Service Registration:** Services can register themselves and find others without hardcoding addresses.
+- **Health Checks:** The server can monitor the health of registered services.
+- **Dashboard:** A user-friendly web interface to view registered services.
+
+## 🔗 Additional Resources
+
+- GitHub Repository: [delivery-eureka-server](https://github.com/ethandivers/delivery-eureka-server)
+- Documentation for Spring Cloud Netflix Eureka: [Spring Cloud](https://spring.io/projects/spring-cloud)
+
+## 📞 Support
+
+If you encounter any issues or have questions, feel free to raise an issue on the GitHub repository or contact the maintainers for assistance.
 
 ---
 
-## 🧰 Build & Run
-
-### Build
-
-```bash
-./gradlew clean build
-```
-
-### Run Locally
-
-```bash
-./gradlew bootRun
-```
-
-or run the built JAR:
-
-```bash
-java -jar build/libs/delivery-eureka-server-0.0.1-SNAPSHOT.jar
-```
-
-Once started, open the Eureka Dashboard in your browser:
-
-👉 [http://localhost:8761](http://localhost:8761)
-
----
-
-## 🧪 Verify Registration
-
-When other microservices (like `gw-delivery`, `ms-delivery-admin`, or `ms-courier-order`) are started with proper Eureka configuration, you’ll see them automatically appear on the Eureka Dashboard under the **Instances currently registered with Eureka** section.
-
-Example:
-
-```
-Application      AMIs    Availability Zones    Status
-MS-DELIVERY-ADMIN    n/a    (1)                 UP (1) - http://localhost:8081
-GW-DELIVERY          n/a    (1)                 UP (1) - http://localhost:8080
-MS-COURIER-ORDER     n/a    (1)                 UP (1) - http://localhost:8082
-```
-
----
-
-## 🔄 Clustering (Optional)
-
-You can run multiple Eureka servers for redundancy.
-Example peer configuration for two-node cluster:
-
-### Node 1 (`application-peer1.yml`)
-
-```yaml
-server:
-  port: 8761
-eureka:
-  instance:
-    hostname: eureka-peer1
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://eureka-peer2:8762/eureka/
-```
-
-### Node 2 (`application-peer2.yml`)
-
-```yaml
-server:
-  port: 8762
-eureka:
-  instance:
-    hostname: eureka-peer2
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://eureka-peer1:8761/eureka/
-```
-
----
-
-## 🩺 Health Check
-
-Eureka includes built-in health monitoring through Spring Boot Actuator.
-Access via:
-
-```
-GET http://localhost:8761/actuator/health
-```
-
-Expected response:
-
-```json
-{
-  "status": "UP"
-}
-```
-
----
-
-## 🧠 Troubleshooting
-
-| Issue                       | Possible Cause              | Solution                                          |
-| --------------------------- | --------------------------- | ------------------------------------------------- |
-| Dashboard not accessible    | Wrong port or startup error | Check `server.port` and logs                      |
-| Services not showing up     | Clients not registered      | Ensure Eureka client config is correct            |
-| Config Server not reachable | Config URI invalid          | Check `spring.cloud.config.uri`                   |
-| Peers not syncing           | Cluster misconfiguration    | Validate `eureka.client.service-url` in each peer |
-
----
-
-## 👥 Contributors
-
-* **Eldar Novruzov** – Lead Developer
-* Contributions welcome! Feel free to open issues or submit pull requests.
-
----
-
-## 📄 License
-
-Licensed under the **MIT License**.
-See the [LICENSE](./LICENSE) file for full terms.
-
----
+With these steps, you can successfully download and run the delivery-eureka-server. Enjoy the power of seamless service discovery for your applications!
